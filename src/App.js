@@ -47,12 +47,37 @@ function App() {
         "maximum": 100,
         "multipleOf": 10
       }
-    }
+    },
+    "anyOf": [
+      {
+        "title": "First method of identification",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "title": "First name",
+            "default": "Chuck"
+          },
+          "lastName": {
+            "type": "string",
+            "title": "Last name"
+          }
+        }
+      },
+      {
+        "title": "Second method of identification",
+        "properties": {
+          "idCode": {
+            "type": "string",
+            "title": "ID code"
+          }
+        }
+      }
+    ]
   }
 
   const uiSchema = {
     "integer": {
-      "ui:widget": "updown"
+      "ui:widget": "updown",
     },
     "numberEnumRadio": {
       "ui:widget": "radio",
