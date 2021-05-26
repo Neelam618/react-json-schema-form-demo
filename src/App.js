@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { withTheme } from '@rjsf/core';
+import { Theme as AntDTheme } from '@rjsf/antd';
+import 'antd/dist/antd.css';
 
 function App() {
+  const Form = withTheme(AntDTheme);
+  const schema = {
+    "title": "A registration form",
+    "description": "A simple form example.",
+    "type": "object",
+    "required": [
+      "firstName",
+      "lastName"
+    ],
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "title": "First name",
+        "default": "Chuck"
+      },
+      "lastName": {
+        "type": "string",
+        "title": "Last name"
+      },
+      "telephone": {
+        "type": "string",
+        "title": "Telephone",
+        "minLength": 10
+      }
+    }
+  }
+
+const log = (type) => console.log.bind(console, type);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Form schema={schema}
+        onChange={log("changed")}
+        onSubmit={log("submitted")}
+        onError={log("errors")} />
   );
 }
 
