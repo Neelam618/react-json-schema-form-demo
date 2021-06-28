@@ -1,6 +1,6 @@
 import React from 'react'
-// import { withTheme } from '@rjsf/core';
-import { withTheme } from 'react-jsonschema-form';
+import { withTheme } from '@rjsf/core';            //for antd, fluentui
+// import { withTheme } from 'react-jsonschema-form';      //for materialui
 import 'antd/dist/antd.css';
 
 export default function MyForm(props) {
