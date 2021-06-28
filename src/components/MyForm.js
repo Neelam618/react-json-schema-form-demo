@@ -1,6 +1,6 @@
 import React from 'react'
-import { withTheme } from '@rjsf/core';
-// import { Theme as AntDTheme } from '@rjsf/antd';
+// import { withTheme } from '@rjsf/core';
+import { withTheme } from 'react-jsonschema-form';
 import 'antd/dist/antd.css';
 
 export default function MyForm(props) {
