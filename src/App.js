@@ -3,7 +3,6 @@ import { Theme as AntDTheme } from '@rjsf/antd';
 import 'antd/dist/antd.css';
 
 function App() {
-  const Form = withTheme(AntDTheme);
   const schema = {
     "type": "object",
     "title": "Number fields & widgets",
@@ -92,6 +91,9 @@ function App() {
       "ui:widget": "range"
     }
   }
+  const framework = AntDTheme
+  const Form = withTheme(framework);
+
 const log = (type) => console.log.bind(console, type);
 
   return (
