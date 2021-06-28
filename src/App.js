@@ -1,6 +1,7 @@
 import { withTheme } from '@rjsf/core';
 import { Theme as AntDTheme } from '@rjsf/antd';
 import 'antd/dist/antd.css';
+import MyForm from './components/MyForm'
 
 function App() {
   const schema = {
@@ -92,17 +93,18 @@ function App() {
     }
   }
   const framework = AntDTheme
-  const Form = withTheme(framework);
-
-const log = (type) => console.log.bind(console, type);
+  // const Form = withTheme(framework);
 
   return (
-    <div style={{margin: '4rem 6rem'}}>
+    <>
+    {/* <div style={{margin: '4rem 6rem'}}>
           <Form schema={schema} uiSchema={uiSchema}
-            onChange={log("changed")}
-            onSubmit={log("submitted")}
-            onError={log("errors")} />
+           />
+    </div> */}
+    <div>
+      <MyForm schema={schema} uiSchema={uiSchema} frameworkName ={"AntDTheme"} framework={AntDTheme}/>
     </div>
+    </>
   );
 }
 
