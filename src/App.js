@@ -1,7 +1,9 @@
 import { Theme as AntDTheme } from '@rjsf/antd';
 import { Theme as MuiTheme } from 'rjsf-material-ui';
 import { Theme as FluentUITheme } from '@rjsf/fluent-ui';
-import 'antd/dist/antd.css';
+import { Theme as SemanticUITheme } from '@rjsf/semantic-ui';
+import { Theme as Bootstrap4Theme } from '@rjsf/bootstrap-4';
+
 import MyForm from './components/MyForm'
 
 function App() {
@@ -93,7 +95,7 @@ function App() {
       "ui:widget": "range"
     }
   }
-  const framework = FluentUITheme
+  const framework = Bootstrap4Theme
   // const Form = withTheme(framework);
 
   return (
@@ -103,7 +105,7 @@ function App() {
            />
     </div> */}
     <div>
-      <MyForm schema={schema} uiSchema={uiSchema} frameworkName ={"AntDTheme"} framework={FluentUITheme}/>
+      <MyForm schema={schema} uiSchema={uiSchema} frameworkName ={"AntDTheme"} framework={Bootstrap4Theme}/>
     </div>
     </>
   );
