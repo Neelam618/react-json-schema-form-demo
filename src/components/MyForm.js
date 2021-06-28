@@ -1,14 +1,9 @@
 import React from 'react'
-import { withTheme } from '@rjsf/core';            //for antd, fluentui, semanticui, bootstrap4
-// import { withTheme } from 'react-jsonschema-form';      //for materialui
+import { withTheme } from '@rjsf/core';      
 import 'antd/dist/antd.css';
 import 'semantic-ui-css/semantic.min.css'
 
 export default function MyForm(props) {
-    // let framework = "";
-    // if (props.frameworkName === "AntDTheme") {
-    //     framework =AntDTheme;
-    // }
 
     const Form = withTheme(props.framework);
     

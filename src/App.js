@@ -95,17 +95,32 @@ function App() {
       "ui:widget": "range"
     }
   }
-  const framework = Bootstrap4Theme
-  // const Form = withTheme(framework);
+  let framework = MuiTheme
+
+  switch(framework) {
+    case AntDTheme:
+      framework = AntDTheme;
+      break;
+      case FluentUITheme:
+      framework = FluentUITheme;
+      break;
+      case SemanticUITheme:
+      framework = SemanticUITheme;
+      break;
+      case Bootstrap4Theme:
+      framework = Bootstrap4Theme;
+      break;
+      case MuiTheme:
+      framework = MuiTheme;
+      break;
+      // default:
+        // framework = MuiTheme;
+  }
 
   return (
     <>
-    {/* <div style={{margin: '4rem 6rem'}}>
-          <Form schema={schema} uiSchema={uiSchema}
-           />
-    </div> */}
     <div>
-      <MyForm schema={schema} uiSchema={uiSchema} frameworkName ={"AntDTheme"} framework={Bootstrap4Theme}/>
+      <MyForm schema={schema} uiSchema={uiSchema} framework={AntDTheme}/>
     </div>
     </>
   );
