@@ -95,33 +95,34 @@ function App() {
       "ui:widget": "range"
     }
   }
-  let framework = MuiTheme
 
-  switch(framework) {
+  let framework = MuiTheme
+  switch (framework) {
     case AntDTheme:
       framework = AntDTheme;
       break;
-      case FluentUITheme:
+    case FluentUITheme:
       framework = FluentUITheme;
       break;
-      case SemanticUITheme:
+    case SemanticUITheme:
       framework = SemanticUITheme;
       break;
-      case Bootstrap4Theme:
+    case Bootstrap4Theme:
       framework = Bootstrap4Theme;
       break;
-      case MuiTheme:
+    case MuiTheme:
       framework = MuiTheme;
       break;
-      // default:
-        // framework = MuiTheme;
+    // default:
+    // framework = MuiTheme;
   }
 
   return (
     <>
-    <div>
-      <MyForm schema={schema} uiSchema={uiSchema} framework={AntDTheme}/>
-    </div>
+      <div>
+        <MyForm schema={schema} uiSchema={uiSchema} framework={AntDTheme} />
+        <MyForm schema={schema} uiSchema={uiSchema} framework={MuiTheme} />
+      </div>
     </>
   );
 }
